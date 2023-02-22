@@ -13,7 +13,9 @@ app.post('/', (request, response) => {
   const data = request.body;
   console.log('It seems that we have recieved a request!')
   console.log(`Body request: ${data}`)
-  if(!Datastore.find({})
+  response.json({
+    "status": 200
+  })
 });
 
 app.get('/', (request, response) => {
